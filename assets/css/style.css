@@ -432,38 +432,47 @@ section {
 /*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+.skills {
+  display: flexbox;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Add this line to vertically center the boxes */
 }
 
-.skills .progress .skill {
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #050d18;
+.skill {
+  flex: 0 0 calc(33.33% - 20px); /* Change the flex-basis to take up 33.33% of the container minus 20px for the margins */
+  margin: 10px; /* Change the margin to be equal on all sides */
+  padding: 20px;
+  border: 1px solid #ddd;
+  color: #1b1c1d;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  display: flex; /* Add this line to vertically center the content */
+  flex-direction: column; /* Add this line to stack the content vertically */
+  align-items: center; /* Add this line to horizontally center the content */
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px #ececec;
+  /* background-color: #f2f2f2; */
+  /* background-color: #00188393; */
+  background-color: #fde3b9;
 }
 
-.skills .progress-bar-wrap {
-  background: #dce8f8;
-  height: 10px;
+.skill h3 {
+  margin-top: 0;
+  font-size: 24px;
+  align-items: center;
+  text-align: center;
 }
 
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #149ddd;
+.skill p {
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  align-items: center;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
