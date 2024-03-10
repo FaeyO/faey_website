@@ -625,18 +625,32 @@ section {
 }
 
 .portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  content: attr(data-text);
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff; 
+  background-color: #20A2DF; 
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 .portfolio .portfolio-wrap:hover .portfolio-links {
   opacity: 1;
   bottom: 0;
 }
-
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
