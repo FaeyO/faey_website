@@ -1,651 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>MediData Perspectives</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Updated: Jan 29 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Favour (Oyibo) Olaitan | Healthcare Data Analyst</title>
+<meta name="description" content="Healthcare data analyst with a nursing background. Tableau dashboards, SQL, Python and machine learning projects built on clinical data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12262e;--muted:#52666e;--bg:#f6f9fa;--card:#fff;--line:#d9e4e8;--teal:#0e7c86;--teal-d:#095a62;--navy:#0b2f3a;--head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;--body:"Source Sans 3","Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font:400 17px/1.6 var(--body);color:var(--ink);background:var(--bg)}
+a{color:var(--teal-d)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:10;background:rgba(246,249,250,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font:700 18px var(--head);text-decoration:none;color:var(--navy)}
+nav ul{display:flex;gap:22px;list-style:none;padding:0;flex-wrap:wrap}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:600;font-size:15px}
+nav ul a:hover{color:var(--teal-d)}
+section{padding:72px 0}
+h1,h2,h3{font-family:var(--head);line-height:1.15;color:var(--navy)}
+h1{font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,3.2vw,2.3rem);margin-bottom:10px}
+h3{font-size:1.15rem;margin-bottom:6px}
+.lead{color:var(--muted);max-width:62ch;margin-bottom:34px}
+.hero{padding:64px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:52ch;margin:18px 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--teal);cursor:pointer;font:600 16px var(--body)}
+.btn.p{background:var(--teal);color:#fff}.btn.p:hover{background:var(--teal-d)}
+.btn.s{background:transparent;color:var(--teal-d)}.btn.s:hover{background:#e3f1f3}
+.shot{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 18px 40px -22px rgba(11,47,58,.45)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{padding:10px 14px;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+.about{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start}
+.about img{width:100%;border-radius:10px;aspect-ratio:1;object-fit:cover;border:1px solid var(--line)}
+.about p+p{margin-top:14px}
+.facts{margin-top:20px;display:flex;gap:10px 28px;flex-wrap:wrap;font-size:15px;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.skills div{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 20px}
+.skills p{color:var(--muted);font-size:15.5px}
+.alt{background:#fff;border-block:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.card .img{aspect-ratio:16/9;background:#e8f0f2 center/cover no-repeat;border-bottom:1px solid var(--line)}
+.card .img.ph{background:linear-gradient(135deg,var(--navy),var(--teal))}
+.card .b{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card p{color:var(--muted);font-size:15.5px;flex:1}
+.tags{font-size:13.5px;color:var(--teal-d);font-weight:600}
+.card .btns{margin-top:6px}.card .btn{padding:8px 14px;font-size:15px}
+.sub{margin:46px 0 18px}
+.resume{background:var(--navy);color:#fff;border-radius:12px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.resume h2{color:#fff;margin:0 0 6px}.resume p{color:#bcd3d9}
+.resume .btn.p{background:#fff;color:var(--navy);border-color:#fff}
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:44px}
+.contact ul{list-style:none;padding:0;margin-top:14px;display:grid;gap:8px}
+form{display:grid;gap:14px}
+label{font-weight:600;font-size:15px;display:grid;gap:5px}
+input,textarea{font:400 16px var(--body);padding:11px 12px;border:1px solid #b9cbd1;border-radius:6px;background:#fff;color:var(--ink);width:100%}
+textarea{min-height:130px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+#status{font-weight:600;min-height:1.5em}
+#status.ok{color:#17653a}#status.err{color:#a3261b}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+dialog{width:min(1200px,96vw);height:92vh;border:0;border-radius:10px;padding:0;background:#fff}
+dialog::backdrop{background:rgba(11,47,58,.7)}
+.dh{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:2}
+.dh h3{margin:0}
+.dh div{display:flex;gap:10px;align-items:center}
+.dh .btn{padding:6px 12px;font-size:14px}
+#vizbox{padding:14px;overflow:auto;height:calc(92vh - 58px)}
+@media(max-width:820px){.hero .wrap,.about,.contact{grid-template-columns:1fr}.about img{max-width:200px}nav ul{gap:14px}section{padding:52px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-
 <body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#top">Favour (Oyibo) Olaitan</a>
+<ul><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#dashboards">Dashboards</a></li><li><a href="#notebooks">Notebooks</a></li><li><a href="#apps">Apps</a></li><li><a href="#credentials">Credentials</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav></div></header>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+<main id="top">
+<section class="hero"><div class="wrap">
+<div>
+<h1>Healthcare data analyst with a nursing background</h1>
+<p>I turn clinical, claims and operations data into dashboards and models that help hospitals and health teams make better decisions.</p>
+<div class="btns"><a class="btn p" href="#dashboards">View dashboards</a><a class="btn s" href="assets/Favour-Olaitan-Resume.pdf" download="Favour-Olaitan-Resume.pdf">Open resume</a><a class="btn s" href="https://www.linkedin.com/in/favour-olaitan-59ab36191/" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+<figure class="shot"><img src="https://public.tableau.com/static/images/RW/RWFD-EmergencyRoomVisitsDashboard/Dashboard1/1.png" alt="Emergency room visits dashboard built in Tableau" width="1500" height="1327"><figcaption>Emergency Room Visits dashboard, built in Tableau</figcaption></figure>
+</div></section>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
+<section id="about"><div class="wrap about">
+<img src="assets/img/faey professional pic.jpeg" alt="Portrait of Favour Oyibo">
+<div>
+<h2>From the ward to the data</h2>
+<p>I hold a Bachelor's degree in Nursing and spent my early career close to patient care. Over the past five years I moved into data analytics in the health sector, learning SQL, Tableau and Python along the way.</p>
+<p>Because I have worked with the records, workflows and pressures behind the numbers, I know which questions matter to clinicians and administrators, and how to present answers they can act on.</p>
+<div class="facts"><span>Abuja, Nigeria</span><span>Open to remote work</span><span>Available for freelance projects</span></div>
+<div class="btns" style="margin-top:20px"><a class="btn s" href="https://github.com/FaeyO" target="_blank" rel="noopener">GitHub</a><a class="btn s" href="https://www.linkedin.com/in/favour-oyibo-59ab36191/" target="_blank" rel="noopener">LinkedIn</a><a class="btn s" href="https://www.kaggle.com/favouroyinbo" target="_blank" rel="noopener">Kaggle</a></div>
+</div></div></section>
 
-      <div class="profile">
-        <img src="assets/img/IMG_2888.JPG" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Favour Oyibo</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="mailto:foyinbo250@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
-          <a href="https://github.com/FaeyO" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/favour-oyibo-59ab36191/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
+<section id="skills" class="alt"><div class="wrap">
+<h2>Skills and tools</h2>
+<p class="lead">The tools I use to take health data from raw records to decisions.</p>
+<div class="skills">
+<div><h3>Dashboards and reporting</h3><p>Tableau, Looker Studio, Excel, Google Sheets, Plotly, Matplotlib, Seaborn</p></div>
+<div><h3>Data and databases</h3><p>SQL, MySQL, ETL, Data Validation, Data cleaning and wrangling, Data Extraction</p></div>
+<div><h3>Programming and modelling</h3><p>Python, Pandas, Statistics, Supervised and Unsupervised Machine learning</p></div>
+<div><h3>Healthcare domain</h3><p>Electronic Health Records(EHR/EMR), Patient Flow Analysis, Healthcare Claims Analysis, Hospital Readmission Analysis, Clinical Quality Metrics, Healthcare KPIs</p></div>
+<div><h3>Working with others</h3><p>Report writing, Stakeholder Communication, Team Collaboration, Data Presentation, Cross-functional Collaboration, Git & GitHub</p></div>
+</div></div></section>
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-check-square"></i> <span>Skills</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Resume</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- End Header -->
+<section id="dashboards"><div class="wrap">
+<h2>Tableau dashboards</h2>
+<p class="lead">Interactive dashboards on emergency care, outpatient access, kidney care and insurance claims. Select a dashboard to open it live.</p>
+<div class="grid">
+<article class="card"><div class="img" style="background-image:url('https://public.tableau.com/static/images/RW/RWFD-EmergencyRoomVisitsDashboard/Dashboard1/1.png')"></div><div class="b"><h3>Emergency Room Visits Dashboard</h3><p>Visit volumes, patient demographics, reasons for visit, wait times and patient outcomes in one view for hospital managers.</p><span class="tags">Tableau</span><div class="btns"><button class="btn p" data-wb="RWFD-EmergencyRoomVisitsDashboard" data-sh="Dashboard1" data-h="1327" data-t="Emergency Room Visits Dashboard">Open dashboard</button></div></div></article>
+<article class="card"><div class="img" style="background-image:url('https://public.tableau.com/static/images/Ou/OutpatientCareClaimsDashboard/OPD-NOSHOWRATEDASHBOARD/1.png')"></div><div class="b"><h3>Outpatient Care and Claims Analysis</h3><p>Tracks outpatient no-show rates alongside claims, to show where missed appointments affect access and revenue.</p><span class="tags">Tableau</span><div class="btns"><button class="btn p" data-wb="OutpatientCareClaimsDashboard" data-sh="OPD-NOSHOWRATEDASHBOARD" data-h="1327" data-t="Outpatient Care and Claims Analysis">Open dashboard</button></div></div></article>
+<article class="card"><div class="img" style="background-image:url('https://public.tableau.com/static/images/Re/RenalCareKRTReadinessDashboard/Dashboard1/1.png')"></div><div class="b"><h3>Renal Failure Readiness and Early Preparation</h3><p>Helps care teams see which patients need early preparation for kidney failure, so planning starts before it becomes urgent.</p><span class="tags">Tableau</span><div class="btns"><button class="btn p" data-wb="RenalCareKRTReadinessDashboard" data-sh="Dashboard1" data-h="1877" data-t="Renal Failure Readiness and Early Preparation" data-f="publish=yes">Open dashboard</button></div></div></article>
+<article class="card"><div class="img" style="background-image:url('https://public.tableau.com/static/images/In/InsuranceClams/Dashboard1/1.png')"></div><div class="b"><h3>Insurance Claims Executive Dashboard</h3><p>An executive summary of claims volume, cost and trends, built for quick leadership review.</p><span class="tags">Tableau</span><div class="btns"><button class="btn p" data-wb="InsuranceClams" data-sh="Dashboard1" data-h="1127" data-t="Insurance Claims Executive Dashboard">Open dashboard</button></div></div></article>
+</div></div></section>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Transforming Health Data <br>into Actionable Insights </h1>
-      <p>I'm <span class="typed" data-typed-items="a Healthcare Data Analyst, a Data Analyst, a Machine Learning Engineer, a Data Scientist"></span></p>
-    </div>
-  </section><!-- End Hero -->
+<section id="notebooks" class="alt"><div class="wrap">
+<h2>Analysis notebooks</h2>
+<p class="lead">SQL, exploratory data analysis and machine learning projects, with full code on GitHub.</p>
+<div class="grid">
+<article class="card"><div class="img" style="background-image:url('assets/img/portfolio/EMR-Website-Graphic-01.png')"></div><div class="b"><h3>Retrieving Patient Data from an Electronic Medical Records Database</h3><p>SQL queries that pull vaccination records out of an EMR database to study patient tetanus toxoid vaccine uptake.</p><span class="tags">SQL</span><div class="btns"><a class="btn p" href="https://github.com/FaeyO/SQL---extracting-data-from-Electronic-Medical-Records-database" target="_blank" rel="noopener">View notebook</a></div></div></article>
+<article class="card"><div class="img" style="background-image:url('assets/img/portfolio/readmission_road.png')"></div><div class="b"><h3>Predicting Which Patients Will Be Readmitted</h3><p>A supervised machine learning model that flags patients at risk of returning to hospital, so teams can plan follow-up care early.</p><span class="tags">Python, machine learning</span><div class="btns"><a class="btn p" href="https://github.com/FaeyO/Factors-determining-patient-readmission" target="_blank" rel="noopener">View notebook</a></div></div></article>
+<article class="card"><div class="img" style="background-image:url('assets/img/portfolio/hospital_beds_busy.jpg')"></div><div class="b"><h3>Hospital Bed Occupancy Analysis</h3><p>Analyzes bed capacity across 737 Pune hospitals, finds why standard occupancy rates fail on this data, and identifies the facilities under the most patient load per bed.</p><span class="tags">Python, EDA</span><div class="btns"><a class="btn p" href="https://github.com/FaeyO/Hospital-Bed-Capacity-Occupancy-Analysis" target="_blank" rel="noopener">View notebook</a></div></div></article>
+<article class="card"><div class="img" style="background-image:url('assets/img/portfolio/heart-big-img.jpg')"></div><div class="b"><h3>Exploratory Analysis of Heart Health Data</h3><p>Examines patient heart data to find the patterns and risk factors associated with cardiovascular disease.</p><span class="tags">Python, EDA</span><div class="btns"><a class="btn p" href="https://github.com/FaeyO/Heart-data-analysis" target="_blank" rel="noopener">View notebook</a></div></div></article>
+</div></div></section>
 
-  <main id="main">
+<section id="apps"><div class="wrap">
+<h2>Web apps</h2>
+<p class="lead">Working tools that put a model or a database in the hands of the person who needs it.</p>
+<div class="grid">
+<article class="card"><div class="img" style="background-image:url('assets/img/portfolio/cardio_img.jpg')"></div><div class="b"><h3>Cardiovascular Disease Risk Predictor</h3><p>Enter a patient's details to see whether they are at high risk of cardiovascular disease.</p><span class="tags">Python, Streamlit</span><div class="btns"><a class="btn p" href="https://cardiovascular-disease-prediction-application.streamlit.app/" target="_blank" rel="noopener">Open app</a></div></div></article>
+<article class="card"><div class="img" style="background-image:url('assets/img/portfolio/sleep-disorders-img.png')"></div><div class="b"><h3>Sleep Disorder Risk Predictor</h3><p>Estimates whether a person is likely to have a sleep disorder, to support underwriting and care decisions.</p><span class="tags">Python, Streamlit</span><div class="btns"><a class="btn p" href="https://sleep-disorder-prediction-app.streamlit.app/" target="_blank" rel="noopener">Open app</a></div></div></article>
+<article class="card"><div class="img" style="background-image:url('assets/img/portfolio/image\(20261104-185031\).png')"></div><div class="b"><h3>Pharmacy Inventory Management App</h3><p>Tracks pharmacy stock levels so staff can spot low and expiring items before they run out.</p><span class="tags">Web app</span><div class="btns"><a class="btn p" href="https://pharmacy-inventory-application-z4fnhzskrwl9rvbr4siukp.streamlit.app/" target="_blank" rel="noopener">Open app</a></div></div></article>
+</div></div></section>
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
+<section id="credentials" class="alt"><div class="wrap">
+<h2>Credentials</h2>
+<p class="lead">Certifications in data analysis, data science, healthcare analytics and medical billing. Each one can be verified online.</p>
+<div class="skills">
+<div><h3>Professional Data Analyst</h3><p>DataCamp<br>Certified April 2024</p><a href="https://www.datacamp.com/certificate/DA0025009522586" target="_blank" rel="noopener">Verify certificate</a></div>
+<div><h3>Data Scientist</h3><p>DataCamp<br>Certified May 2024</p><a href="https://www.datacamp.com/certificate/DS0023963077561" target="_blank" rel="noopener">Verify certificate</a></div>
+<div><h3>Analytical Solutions to Common Healthcare Problems</h3><p>UC Davis, via Coursera<br>December 2023</p><a href="https://coursera.org/verify/XKCEXWNRCK83" target="_blank" rel="noopener">Verify certificate</a></div>
+<div><h3>Medical Billing: Code and Claim Cleanly</h3><p>Coursera<br>April 2026</p><a href="https://coursera.org/verify/23IRBP0LYJGO" target="_blank" rel="noopener">Verify certificate</a></div>
+</div></div></section>
 
-        <div class="section-title">
-          <h2>About</h2>
-          <p>Welcome to my healthcare data analysis platform, where innovation meets healthcare excellence. My journey
-            began with a Bachelor's in Nursing, a pivotal experience that ignited my passion for transforming
-            healthcare. Witnessing the profound impact that healthcare has on individuals' lives inspired me to explore
-            the intersection of nursing and data analysis.
+<section class="alt"><div class="wrap"><div class="resume">
+<div><h2>Resume</h2><p>Education, certifications and experience in one page.</p></div>
+<div class="btns"><!-- TODO: replace the Drive link with the share link of the new resume PDF -->
+<a class="btn p" href="https://drive.google.com/file/d/1F-mTr5cHYNGbwfMwAOv4o5vXaZXjzXIv/preview" target="_blank" rel="noopener">Open resume</a><a class="btn s" href="assets/Favour-Olaitan-Resume.pdf" download="Favour-Olaitan-Resume.pdf">Download PDF</a></div>
+</div></div></section>
 
-            As a certified Data Analyst and Scientist, I'm dedicated to bridging the gap between healthcare and data
-            analytics. Armed with expertise in SQL, Microsoft Excel, Tableau, Python, and Machine Learning, I transform
-            intricate healthcare data into actionable insights. My proficiency in building and deploying machine
-            learning models enables me to extract valuable information from complex datasets.
+<section id="contact"><div class="wrap contact">
+<div>
+<h2>Get in touch</h2>
+<p class="lead" style="margin-bottom:0">Have a role, a project or a question? Send a message and I will reply by email.</p>
+<ul><li><a href="mailto:foyinbo250@gmail.com">foyinbo250@gmail.com</a></li><li><a href="tel:+2347063631613">(+234) 70 6363 1613</a></li><li>Abuja, Nigeria</li></ul>
+</div>
+<form id="f" novalidate>
+<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+<input type="hidden" name="subject" value="New message from your portfolio website">
+<input type="hidden" name="from_name" value="Portfolio website">
+<input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label>Your name<input name="name" required autocomplete="name"></label>
+<label>Your email<input name="email" type="email" required autocomplete="email"></label>
+<label>Message<textarea name="message" required></textarea></label>
+<button class="btn p" type="submit" id="send">Send message</button>
+<p id="status" role="status"></p>
+</form>
+</div></section>
+</main>
 
-            With a keen eye for detail and a knack for data wrangling and cleaning, I excel in handling large datasets
-            to generate meaningful insights. My ability to communicate technical concepts to diverse stakeholders
-            facilitates seamless collaboration across departments.
+<footer><div class="wrap">© <span id="yr"></span> Favour (Oyibo) Olaitan. All projects use public or synthetic data; no real patient information is shown.</div></footer>
 
-            As a lifelong learner, I'm committed to staying abreast of the latest advancements in data science. I
-            continuously seek out new techniques and methodologies to reshape healthcare delivery. My ultimate goal is
-            to enhance efficiency, accuracy, and patient-centricity in healthcare, ushering in a new era of innovation
-            and excellence.</p>
-        </div>
+<dialog id="dlg" aria-labelledby="dt">
+<div class="dh"><h3 id="dt"></h3><div><a class="btn s" id="dl" target="_blank" rel="noopener">Open on Tableau Public</a><button class="btn p" id="dx">Close</button></div></div>
+<div id="vizbox"></div>
+</dialog>
 
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/IMG_2888.JPG" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Healthcare Data Analyst.</h3>
-            <p class="fst-italic">
-              Overview
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>September 7</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Abuja, Nigeria</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>foyinbo250@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><a href="https://github.com/FaeyO" class><span>Github Profile</span></a></li>
-                  <li><a href="https://www.linkedin.com/in/favour-oyibo-59ab36191/" class><span>linkedin
-                        Profile</span></a></li>
-                  <li><a href="https://www.kaggle.com/favouroyinbo" class><span>Kaggle Profile</span></a></li>
-                </ul>
-              </div>
-            </div>
-            <p>
-            </p>
-          </div>
-        </div>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var dlg=document.getElementById('dlg'),box=document.getElementById('vizbox');
+document.querySelectorAll('[data-wb]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var wb=b.dataset.wb,sh=b.dataset.sh,pre=wb.slice(0,2),id='viz'+Date.now();
+    var img='https://public.tableau.com/static/images/'+pre+'/'+wb+'/'+sh+'/1';
+    document.getElementById('dt').textContent=b.dataset.t;
+    document.getElementById('dl').href='https://public.tableau.com/views/'+wb+'/'+sh;
+    var f=b.dataset.f?"<param name='filter' value='"+b.dataset.f+"' />":'';
+    box.innerHTML="<div class='tableauPlaceholder' id='"+id+"' style='position:relative'><noscript><img alt='"+b.dataset.t+"' src='"+img+"_rss.png'></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /><param name='embed_code_version' value='3' /><param name='site_root' value='' /><param name='name' value='"+wb+"/"+sh+"' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='"+img+".png' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' />"+f+"</object></div>";
+    var o=box.querySelector('object');
+    o.style.width='100%';o.style.height=b.dataset.h+'px';
+    var s=document.createElement('script');
+    s.src='https://public.tableau.com/javascripts/api/viz_v1.js';
+    o.parentNode.insertBefore(s,o);
+    dlg.showModal();box.scrollTop=0;
+  });
+});
+function closeDlg(){dlg.close();box.innerHTML=''}
+document.getElementById('dx').addEventListener('click',closeDlg);
+dlg.addEventListener('click',function(e){if(e.target===dlg)closeDlg()});
+dlg.addEventListener('cancel',function(){box.innerHTML=''});
 
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-  <div class="container">
-    <div class="section-title">
-      <h2>Skills</h2>
-      <p>Skills and Technologies used.</p>
-    </div>
-    <div class="row skills-content">
-      <div class="col-lg-12 aos-init aos-animate" data-aos="fade-up">
-        <div class="skills">
-          <div class="skill">
-            <h3><strong>Data Visualization</strong></h3>
-            <p>Excel, Tableau, Pandas, Matplotlib, Seaborn, Plotly.</p>
-          </div>
-          <div class="skill">
-            <h3><strong>Data Manipulation</strong></h3>
-            <p>Extract Transform Load, Data Processing, Data Wrangling, Data Analysis, Data Mining.</p>
-          </div>
-          <div class="skill">
-            <h3><strong>Database Management</strong></h3>
-            <p>SQL, MySQL, MongoDB.</p>
-          </div>
-          <div class="skill">
-            <h3><strong>Spreadsheets</strong></h3>
-            <p>Microsoft Excel, Google Sheets.</p>
-          </div>
-          <div class="skill">
-            <h3><strong>Programming and Scripting</strong></h3>
-            <p>Python, Object Oriented Programming, Data Structures, Algorithm.</p>
-          </div>
-          <div class="skill">
-            <h3><strong>Machine Learning</strong></h3>
-            <p>Supervised and Unsupervised Learning, Statistics, Natural Language Processing, TensorFlow.</p>
-          </div>
-          <div class="skill">
-            <h3><strong>Version Control</strong></h3>
-            <p>Github.</p>
-          </div>
-          <div class="skill">
-            <h3><strong>Soft Skills</strong></h3>
-            <p>Teamwork, Leadership, Communication, Report Writing.</p>
-          </div>
-          <div class="skill">
-            <h3><strong>Miscellaneous</strong></h3>
-            <p>PowerPoint, Google Colab, Mathematics.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!-- End Skills Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Projects</h2>
-          <p style="font-weight: 490;">Within this repository, you'll discover a curated collection of my past projects
-            and endeavors,
-            illuminating my proficiency and creativity across various domains including data analytics,
-            data science, and machine learning.</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-dashboard">Dashboard</li>
-              <li data-filter=".filter-note">Notebook</li>
-              <li data-filter=".filter-app">App</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100" style="position: relative; height: 3020.65px;">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-dashboard"
-              style="position: absolute; left: 0px; top: 0px;">
-              <div class="portfolio-wrap" data-text="Medication Error Report">
-                <img src="assets/img/portfolio/Medication-Error-2.png" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://github.com/FaeyO/Patient-Medication-Error-Report" title="View Dashboard">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                A medication error report dashboard is a visual representation of data related to medication errors
-                within a healthcare setting.
-                It provides an overview of key metrics, trends, and insights related to medication errors, helping
-                healthcare professionals and
-                administrators monitor, analyze, and address issues.
-                This dashboard include information such as the number and types of errors,
-                contributing factors, affected patients, trends over time, and the effectiveness of implemented
-                corrective measures.
-                By offering a consolidated and visualized view of medication safety data, the dashboard facilitates
-                informed decision-making
-                and continuous improvement efforts to enhance patient safety.
-              </p>
-            </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-note"
-              style="position: absolute; left: 390px; top: 0px;">
-              <div class="portfolio-wrap"
-                data-text="Retrieving information from an Electronic Medical Record (EMR) database">
-                <img src="assets/img/portfolio/EMR-Website-Graphic-01.png" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://github.com/FaeyO/SQL---extracting-data-from-Electronic-Medical-Records-database"
-                    title="View Notebook">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                The EMR(Electronic Medical Record) is a digital version of a patient's paper chart in a single
-                healthcare organization,
-                such as a doctor's office, clinic, or hospital. EMRs contain patient health information, including
-                medical history, diagnoses,
-                medications, treatment plans, immunization dates, allergies, radiology images, and laboratory test
-                results.
-                EMRs are typically used internally within a single healthcare organization.
-                They streamline workflows, improve patient care, and enable healthcare providers to access patient
-                information efficiently.
-                This project involves utilizing SQL queries to extract pertinent data from the EMR database, which will
-                subsequently be utilized
-                for analyzing patterns related to patient tetanus toxoid vaccinations.
-              </p>
-            </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-dashboard"
-              style="position: absolute; left: 780px; top: 0px;">
-              <div class="portfolio-wrap" data-text="Tetanus Toxoid vaccination report">
-                <img src="assets/img/portfolio/vaccine_2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://github.com/FaeyO/The-Tetanus-toxoid-vaccination-report" title="View Dashboard">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                Tetanus vaccination is a crucial preventive measure against tetanus, a serious bacterial infection
-                caused by Clostridium tetani.
-                The vaccine stimulates the body's immune system to produce antibodies against the tetanus toxin,
-                providing immunity to the disease.
-                It is typically administered as part of a combination vaccine, such as the DTaP vaccine for children or
-                the Tdap vaccine for adolescents and
-                adults. Routine vaccination is recommended to ensure ongoing protection against tetanus, particularly
-                following injuries or wounds that may
-                increase the risk of infection.
-                This dynamic dashboard offers a comprehensive overview of patient vaccination trends spanning 5 years.
-                It enables healthcare providers to track and analyze patient attendance for Tetanus vaccinations,
-                including those who have defaulted from taking the vaccine shots.
-              </p>
-            </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-note"
-              style="position: absolute; left: 0px; top: 700.7px;">
-              <div class="portfolio-wrap" data-text="Which Patient will be Readmitted?">
-                <img src="assets/img/portfolio/readmission_road.png" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://github.com/FaeyO/Factors-determining-patient-readmission" title="View Notebook">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                Hospital patient readmission refers to the scenario where a patient, who has recently been discharged
-                from a hospital,
-                returns to the same hospital for additional medical care within a specified time frame. Readmissions are
-                often monitored as a key
-                healthcare quality metric, and efforts are made to reduce them. High rates of readmission may indicate
-                issues with the initial treatment,
-                discharge process, or ongoing care. This supervised machine learning data science project produced
-                insights and developed a model
-                capable of effectively predicting and enhancing understanding of the likelihood of patient readmission.
-                The insights gained from this endeavor enable healthcare facilities to promptly identify patients who
-                are at risk of readmission,
-                allowing them to allocate resources more effectively and mitigate the need for additional healthcare
-                expenditures.
-              </p>
-            </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app"
-              style="position: absolute; left: 390px; top: 770.775px;">
-              <div class="portfolio-wrap" data-text="Cardiovascular disease prediction App">
-                <img src="assets/img/portfolio/cardio_img.jpg" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://cardiovascular-disease-prediction-application.streamlit.app/" title="View App">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                Cardiovascular disease is one of the main cause of death worldwide.Identifying and predicting the
-                disease in patients is the first step
-                towards stopping its progression. The capabilities of machine learning models in detecting at-risk
-                patients using survey data was evaluated,
-                and key variables that contribute to the disease among patient was identified within the data. This
-                simple, yet powerful tool allows Patient and healthcare
-                professional to quickly and easily identify patient that are at high risk of suffering from
-                cardiovascular disease.
-              </p>
-            </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app"
-              style="position: absolute; left: 780px; top: 799.775px;">
-              <div class="portfolio-wrap" data-text="Sleep Disorder Prediction Application">
-                <img src="assets/img/portfolio/sleep-disorders-img.png" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://sleep-disorder-prediction-app.streamlit.app/" title="View App">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                Sleep disorder is a medical condition that affects an individual's ability to have a healthy and
-                restorative night's sleep.
-                Sleep is an essential part of our daily routine,and disturbances in this natural process can have
-                profound impacts on physical,
-                mental, and emotional well-being.
-                This simple yet unique web application would help health insurance company to identify whether or not a
-                potential client is likely to suffer from
-                sleep disorder.
-                The company would be able to use this information to determine the premium they want the client to pay.
-              </p>
-            </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-note"
-              style="position: absolute; left: 0px; top: 1570.32px;">
-              <div class="portfolio-wrap" data-text="Analyzing Sleep Disorders in Workers">
-                <img src="assets/img/portfolio/sleep_img.jpg" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://github.com/FaeyO/Sleep-disorder-analysis" title="View Notebook">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                This extensive supervised machine learning data science project has yielded valuable insights and
-                developed a robust model
-                capable of accurately predicting patients at the highest risk of experiencing a sleep disorder. This
-                predictive capability
-                empowers healthcare providers to take proactive measures in preventing sleep disorders, thereby
-                enhancing patient care and
-                well-being.
-              </p>
-            </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-dashboard"
-              style="position: absolute; left: 390px; top: 1430.32px;">
-              <div class="portfolio-wrap" data-text="Global cause of death(2015 - 2019)">
-                <img src="assets/img/portfolio/Death-Row-Records-logo.png" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://github.com/FaeyO/Global-Cause-of-Death-2015---2019" title="View Dashboard">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                Deep diving into an extensive dataset spanning from 2015 to 2019, I unravel the intricate tapestry of
-                global causes of death.
-                By meticulously analyzing a myriad of causes, ranging from communicable diseases to non-communicable
-                conditions, profound
-                insights emerge, shedding light on the multifaceted challenges that impact global health. Over the
-                course of five years, I
-                meticulously decipher temporal nuances in causes of death. This exploration uncovers emerging trends on
-                a global scale, offering
-                valuable insights that shape our understanding of public health priorities.
-                Each region narrates a unique story. Through a meticulous dissection of causes of death across countries
-                and continents,
-                utilizing tools like Pareto's chart, I unravel the complex interplay of significant few causing major
-                mortality. Are there new
-                patterns on the horizon? Uncovering emerging trends becomes pivotal for anticipating health challenges
-                and proactively designing
-                effective interventions.
-              </p>
-            </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-dashboard"
-              style="position: absolute; left: 780px; top: 1430.32px;">
-              <div class="portfolio-wrap" data-text="Hospital Emergency Room Visits">
-                <img src="assets/img/portfolio/emergency_img.png" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://github.com/FaeyO/Hospital-Emergency-Room-Visits-" title="View Dashboard">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                This hospital emergency room visits dashboard provides a concise overview of various metrics related to
-                visits to the emergency
-                department of a hospital. It typically includes information such as the number of visits over a specific
-                period, demographics of
-                patients (age, gender), reasons for visits (chief complaints), average wait times, disposition of
-                patients (admitted, discharged,
-                transferred), and any relevant trends or patterns observed.
-                This dashboard serves as a valuable tool for hospital administrators, healthcare providers, and
-                policymakers to monitor the
-                utilization of emergency services, identify areas for improvement in patient care and resource
-                allocation, track patient flow, and
-                make informed decisions to enhance the efficiency and effectiveness of emergency care delivery.
-              </p>
-            </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-note"
-              style="position: absolute; left: 0px; top: 2140.91px;">
-              <div class="portfolio-wrap" data-text="Patient Satisfaction Survey Report">
-                <img src="assets/img/portfolio/customer-satisfaction_img.png" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://github.com/FaeyO/Patient-Satisfaction-Survey-Dashboard" title="View Dashboard">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                This dashboard serves as a pivotal tool for healthcare professionals, facilitating a deeper
-                understanding of their patients' needs
-                and preferences. By leveraging various metrics and ratings, it enables healthcare institutions to gauge
-                the satisfaction levels of
-                their clientele regarding the services provided. Through insightful analysis, it delineates areas
-                warranting enhancement, thereby
-                empowering stakeholders to refine service delivery strategies.
-                Furthermore, the dashboard provides invaluable insights into key performance indicators such as the
-                average duration of
-                doctor-patient interactions and the typical length of patient stays. Armed with this data, healthcare
-                providers can pinpoint
-                operational inefficiencies and address underlying factors contributing to prolonged wait times or
-                inadequate consultations.
-                This proactive approach enables them to devise targeted interventions aimed at optimizing patient care
-                and operational efficacy.
-              </p>
-            </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-note"
-              style="position: absolute; left: 390px; top: 2330.91px;">
-              <div class="portfolio-wrap" data-text="An Exploratory Data Analysis on Heart data">
-                <img src="assets/img/portfolio/heart-big-img.jpg" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://github.com/FaeyO/Heart-data-analysis" title="View Notebook">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                This project involves the examination and interpretation of data related to heart health and
-                cardiovascular conditions.
-                This field encompasses various aspects, including medical research, clinical studies, and health
-                monitoring.Heart data analysis often
-                involves monitoring physiological parameters related to heart health, such as heart rate, blood
-                pressure, and electrocardiogram (ECG)
-                readings. It helps in assessing an individual's risk of developing cardiovascular diseases. This risk
-                assessment can guide healthcare
-                professionals in creating personalized prevention and intervention strategies.
-              </p>
-            </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app"
-              style="position: absolute; left: 780px; top: 2310.91px;">
-              <div class="portfolio-wrap" data-text="Patient Readmission Application">
-                <img src="assets/img/portfolio/Reduce-Hospital-Readmission-img.webp" class="img-fluid" alt="">
-                <div class="portfolio-links">
-                  <a href="https://readmission-application.streamlit.app/" title="View App">
-                    <i class="bx bx-link"></i></a>
-                </div>
-              </div>
-              <br>
-              <p>
-                Readmissions are often monitored as a key healthcare quality metric, and efforts are made to reduce
-                them. High rates of
-                readmission may indicate issues with the initial treatment, discharge process, or ongoing care. The
-                Patient Readmission
-                Application would help healthcare professional to quickly and easily detect patient that are at high
-                risk for readmissions.
-              </p>
-            </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-   <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p style="font-weight: 490;">
-            Below, you'll discover an in-depth overview of my professional background and competencies, accompanied by
-            details regarding my
-            education and certifications. Additionally, you'll find insights into my interests and accomplishments,
-            including any noteworthy
-            publications or projects I've contributed to. Please don't hesitate to peruse my resume and reach out with
-            any inquiries or potential
-            collaborations you'd like to explore further. Click <a
-              href="https://drive.google.com/file/d/1rIxUNyygxSr0BwOzUarudvBYRhM8YfqZ/view?usp=sharing">here</a>to
-            explore My<a
-              href="https://drive.google.com/file/d/1rIxUNyygxSr0BwOzUarudvBYRhM8YfqZ/view?usp=sharing">Resume</a> ✅.
-          </p>
-        </div>
-      </div>
-    </section><!-- End Resume Section --> 
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p style="font-weight: 490;">How to reach out to me ...</p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Abuja, Federal Capital Territory, Nigeria</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>foyinbo250@gamil.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>(+234)70 6363 1613</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        <strong><span></span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        <a href="https://bootstrapmade.com/"></a>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+var form=document.getElementById('f'),st=document.getElementById('status'),sb=document.getElementById('send');
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!form.checkValidity()){st.className='err';st.textContent='Please fill in your name, a valid email and a message.';return}
+  sb.disabled=true;st.className='';st.textContent='Sending...';
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))})
+  .then(function(r){return r.json()})
+  .then(function(d){
+    if(d.success){st.className='ok';st.textContent='Message sent. Thank you, I will reply soon.';form.reset()}
+    else{st.className='err';st.textContent='The message could not be sent. Please email me directly at foyinbo250@gmail.com.'}
+  })
+  .catch(function(){st.className='err';st.textContent='Network error. Please email me directly at foyinbo250@gmail.com.'})
+  .finally(function(){sb.disabled=false});
+});
+</script>
 </body>
-
 </html>
